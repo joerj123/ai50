@@ -1,0 +1,6 @@
+*.png
+*/assets
+*/__pycache__
+*.ttf
+/traffic/gtsrb
+/traffic/model
