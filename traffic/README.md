@@ -1,0 +1,7 @@
+# Document learnings & experimentation results
+
+In the initial stages of the project, the approach was directly borrowed from a lecture. This first attempt yielded a mere 5% accuracy, even though the loss was less than 1. To enhance the model's performance, a second hidden layer was introduced. However, this addition barely made any noticeable difference. The introduction of a third layer did not fare any better, with the accuracy remaining disappointingly low and the processing speed slowing down. Interestingly, removing the max-pooling layer had no discernible effect on the model's performance.
+
+Seeking further improvements, a second convolution step was added, this time with 64 filters. This gave a significant increase in accuracy, pushing it to over 56%. A subsequent adjustment to the dropout rate revealed that the initial setting of 0.5 was a major culprit behind the model's subpar performance. Lowering the dropout to 0.25 struck the right balance, optimizing performance without leading to overfitting. However, not all modifications led to positive outcomes. For instance, increasing both convolution layers to 128 filters surprisingly decreased the accuracy considerably, a result that was rather counterintuitive.
+
+On the brighter side, enhancing the neurons in the hidden layer to 128 proved beneficial, increasing the accuracy to an impressive 96%. A subsequent tweak, which involved reducing the filters to 32 in each convolutional layer, not only sped up the processing but also maintained the high accuracy. 
